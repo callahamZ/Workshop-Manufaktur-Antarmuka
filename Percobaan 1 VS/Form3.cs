@@ -21,8 +21,10 @@ namespace Percobaan_1_VS
         private void button2_Click(object sender, EventArgs e)
         {
             serialPort1.Close();
-            Form1.ActiveForm.Text = "Serial Communication";
+            MessageBox.Show(serialPort1.PortName + " terputus!", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information);
             button1.Enabled = true;
+            button2.Enabled = false;
+            button3.Enabled = false;
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -46,15 +48,15 @@ namespace Percobaan_1_VS
             try
             {
                 serialPort1.Open();
-                MessageBox.Show("Port " + comboBox1.Text + " tersambung!", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(serialPort1.PortName + " tersambung!", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 button1.Enabled = false;
+                button2.Enabled = true;
                 button3.Enabled = true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error opening serial port:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            Form1.ActiveForm.Text = serialPort1.PortName + " tersambung";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -75,6 +77,11 @@ namespace Percobaan_1_VS
             else
                 // This is the UI thread so perform the task. 
                 listBox1.Items.Add(item);
+        }
+
+        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            serialPort1.Close();
         }
     }
 }
