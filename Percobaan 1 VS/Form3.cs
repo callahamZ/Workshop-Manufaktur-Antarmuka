@@ -22,6 +22,7 @@ namespace Percobaan_1_VS
         {
             serialPort1.Close();
             Form1.ActiveForm.Text = "Serial Communication";
+            button1.Enabled = true;
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -29,12 +30,30 @@ namespace Percobaan_1_VS
             String[] portList = System.IO.Ports.SerialPort.GetPortNames();
             foreach (String portName in portList)
                 comboBox1.Items.Add(portName);
+            serialPort1.DataReceived += serialPort1_DataReceived;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (comboBox1.Text == "")
+            {
+                MessageBox.Show("Pilihan Port Serial tidak boleh kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+                
             serialPort1.PortName = comboBox1.Text;
-            serialPort1.Open();
+
+            try
+            {
+                serialPort1.Open();
+                MessageBox.Show("Port " + comboBox1.Text + " tersambung!", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                button1.Enabled = false;
+                button3.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error opening serial port:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             Form1.ActiveForm.Text = serialPort1.PortName + " tersambung";
         }
 
