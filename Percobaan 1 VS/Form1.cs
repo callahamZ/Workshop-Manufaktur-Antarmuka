@@ -126,5 +126,15 @@ namespace Percobaan_1_VS
         {
             timer1.Interval = Convert.ToInt32(numericUpDown7.Value);
         }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

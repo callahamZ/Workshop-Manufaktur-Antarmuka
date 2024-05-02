@@ -86,7 +86,7 @@
             // 
             chartArea2.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea2);
-            this.chart1.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.chart1.Cursor = System.Windows.Forms.Cursors.Arrow;
             legend2.Name = "Legend1";
             this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(252, 98);
@@ -106,6 +106,7 @@
             this.chart1.Size = new System.Drawing.Size(718, 443);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // timer1
             // 
@@ -122,6 +123,7 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Graphic Plotter 1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox1
             // 

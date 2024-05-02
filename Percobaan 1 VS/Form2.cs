@@ -29,6 +29,17 @@ namespace Percobaan_1_VS
             chart1.Series[0].Color = Color.Red; // Mengatur warna menjadi merah
             chart1.Legends[0].Docking =
             System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+
+            chart2.ChartAreas[0].AxisX.LabelStyle.Format = "0.00";
+            chart2.Series[0].Name = "COS"; // Membuat series baru dengan nama tsb
+            chart2.Series[0].ChartType =
+            System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            // Mengatur tipe chart menjadi line chart
+
+            chart2.Series[0].BorderWidth = 5; // Mengatur tebal garis menjadi 5px
+            chart2.Series[0].Color = Color.Green; // Mengatur warna menjadi merah
+            chart2.Legends[0].Docking =
+            System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -49,6 +60,15 @@ namespace Percobaan_1_VS
             {
                 chart1.ChartAreas[0].AxisX.Minimum = time - (0.01 * 40);
                 chart1.ChartAreas[0].AxisX.Maximum = time;
+            }
+
+            double y2 = amplitude * Math.Cos(2 * Math.PI * frequency * time);
+            chart2.Series[0].Points.AddXY(time, y2);
+            time += 0.01;
+            if (chart2.Series[0].Points.Count > 40)
+            {
+                chart2.ChartAreas[0].AxisX.Minimum = time - (0.01 * 40);
+                chart2.ChartAreas[0].AxisX.Maximum = time;
             }
         }
     }
