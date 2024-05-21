@@ -34,5 +34,11 @@ namespace Percobaan_1_VS
             Form FormPerc3 = new Form3();
             FormPerc3.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form FormPerc6 = new Form4();
+            FormPerc6.Show();
+        }
     }
 }
