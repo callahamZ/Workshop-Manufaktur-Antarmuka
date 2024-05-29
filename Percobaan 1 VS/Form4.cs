@@ -48,10 +48,10 @@ namespace Percobaan_1_VS
         private void splitData(object item)
         {
             String[] data = item.ToString().Split(',');
-            textBox1.Text = data[1]; // textbox untuk data suhu 
-            textBox2.Text = data[2]; // textbox untuk data kelembaban 
-            textBox3.Text = data[3]; // textbox untuk data tekanan udara 
-            textBox4.Text = data[4]; // textbox untuk data uv index         
+            textBox1.Text = data[1];
+            textBox2.Text = data[2];
+            textBox3.Text = data[3];
+            textBox4.Text = data[4];      
         }
 
         private void Form4_Load(object sender, EventArgs e)
