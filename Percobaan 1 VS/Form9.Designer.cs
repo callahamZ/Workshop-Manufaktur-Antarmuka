@@ -74,6 +74,7 @@
             this.rollingDoorIndikator = new System.Windows.Forms.Panel();
             this.gambarTruk = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.labelBebas = new System.Windows.Forms.Label();
             this.Tembok.SuspendLayout();
             this.Lantai.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -381,6 +382,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.labelBebas);
             this.groupBox2.Controls.Add(this.rollingDoorIndikator);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label14);
@@ -522,6 +524,15 @@
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
+            // labelBebas
+            // 
+            this.labelBebas.AutoSize = true;
+            this.labelBebas.Location = new System.Drawing.Point(254, 92);
+            this.labelBebas.Name = "labelBebas";
+            this.labelBebas.Size = new System.Drawing.Size(40, 16);
+            this.labelBebas.TabIndex = 20;
+            this.labelBebas.Text = "Level";
+            // 
             // Form9
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -610,5 +621,6 @@
         private System.Windows.Forms.Panel sensorUltraIndikator;
         private System.Windows.Forms.Panel rollingDoorIndikator;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label labelBebas;
     }
 }

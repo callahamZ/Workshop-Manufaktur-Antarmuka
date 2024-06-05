@@ -46,6 +46,13 @@ namespace Percobaan_1_VS
             checkUltra();
             checkProx();
 
+            // Pintu turun kembali
+            if (gambarTruk.Left == 360)
+            {
+                modeNaik = false;
+                timer2.Start();
+            }
+
             if (imageX >= truckStopPoint)
             {
                 timer1.Stop();
@@ -71,21 +78,30 @@ namespace Percobaan_1_VS
         {
             if (modeNaik)
             {
-
+                panelPintuY--;
+            }
+            else if (!modeNaik)
+            {
+                panelPintuY++;
             }
 
-
-            panelPintuY--;
             rollingDoor.Top = panelPintuY;
 
             rollingDoorIndikator.BackColor = Color.Green;
 
             limitSwitchCheck();
 
-            if (panelPintuY <= -120)
+            if (modeNaik && panelPintuY <= -120)
             {
                 timer2.Stop();
                 rollingDoorIndikator.BackColor= Color.Red;
+                modeNaik = false;
+            }
+            else if (!modeNaik && panelPintuY >= 24)
+            {
+                timer2.Stop();
+                rollingDoorIndikator.BackColor = Color.Red;
+                modeNaik = true;
             }
         }
 
