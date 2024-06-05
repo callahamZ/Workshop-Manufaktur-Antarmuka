@@ -26,6 +26,7 @@ namespace Percobaan_1_VS
         private int panelPintuY = 0;
         private int truckStopPoint = 160;
         private bool truckContinue = false;
+        private bool modeNaik = true;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -68,6 +69,12 @@ namespace Percobaan_1_VS
 
         private void timer2_Tick(object sender, EventArgs e)
         {
+            if (modeNaik)
+            {
+
+            }
+
+
             panelPintuY--;
             rollingDoor.Top = panelPintuY;
 
