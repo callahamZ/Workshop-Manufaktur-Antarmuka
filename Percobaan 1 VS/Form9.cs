@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,44 +24,164 @@ namespace Percobaan_1_VS
 
         private int imageX = 0;
         private int panelPintuY = 0;
-        private int deltaX = 1;
-        private int deltaY = 1;
+        private int truckStopPoint = 160;
+        private bool truckContinue = false;
 
         private void button1_Click(object sender, EventArgs e)
         {
-            imageX = pictureBox1.Left;
-
+            imageX = gambarTruk.Left;
+            if (truckContinue)
+            {
+                truckStopPoint = 500;
+            }
             timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            imageX += deltaX;
-            pictureBox1.Left = imageX;
+            imageX++;
+            gambarTruk.Left = imageX;
 
-            if (imageX >= 160)
+            checkUltra();
+            checkProx();
+
+            if (imageX >= truckStopPoint)
             {
-                bukaPintu();
                 timer1.Stop();
+                if (truckContinue == true)
+                {
+                    truckStopPoint = 160;
+                    truckContinue = false;
+                    return;
+                }
+                bukaPintu();
+                truckContinue = true;
             }
         }
 
         void bukaPintu ()
         {
-            panelPintuY = panel6.Top;
+            panelPintuY = rollingDoor.Top;
 
             timer2.Start();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            panelPintuY -= deltaY;
-            panel6.Top = panelPintuY;
+            panelPintuY--;
+            rollingDoor.Top = panelPintuY;
 
             if (panelPintuY <= -100)
             {
                 timer2.Stop();
             }
+        }
+
+        void checkUltra()
+        {
+            if (gambarTruk.Left >= 140)
+            {
+
+            }
+        }
+
+        void checkProx()
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "")
+            {
+                MessageBox.Show("Pilihan Port Serial tidak boleh kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            serialPort1.PortName = comboBox1.Text;
+
+            try
+            {
+                serialPort1.PortName = comboBox1.Text;
+                serialPort1.BaudRate = Int32.Parse(comboBox2.Text);
+                serialPort1.DataBits = Int32.Parse(comboBox4.Text);
+                dapatkanParity();
+                dapatkanStopBit();
+                serialPort1.NewLine = "\r";
+                serialPort1.Open();
+
+                toolStripStatusLabel1.Text = serialPort1.PortName + " tersambung.";
+
+                comboBox1.ForeColor = Color.Green;
+                MessageBox.Show(serialPort1.PortName + " tersambung!", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                button3.Enabled = false;
+                button2.Enabled = true;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error opening serial port:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                toolStripStatusLabel1.Text = "ERROR: " + ex.Message.ToString();
+            }
+        }
+
+        private void dapatkanParity()
+        {
+            if (comboBox3.SelectedIndex == 0)
+            {
+                serialPort1.Parity = Parity.None;
+            }
+            else if (comboBox3.SelectedIndex == 1)
+            {
+                serialPort1.Parity = Parity.Even;
+            }
+            else if (comboBox3.SelectedIndex == 2)
+            {
+                serialPort1.Parity = Parity.Odd;
+            }
+        }
+
+        private void dapatkanStopBit()
+        {
+            if (comboBox5.SelectedIndex == 0)
+            {
+                serialPort1.StopBits = StopBits.One;
+            }
+            else if (comboBox5.SelectedIndex == 1)
+            {
+                serialPort1.StopBits = StopBits.Two;
+            }
+            else if (comboBox5.SelectedIndex == 2)
+            {
+                serialPort1.StopBits = StopBits.OnePointFive;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            serialPort1.Close();
+            toolStripStatusLabel1.Text = serialPort1.PortName + " terputus.";
+            MessageBox.Show(serialPort1.PortName + " terputus!", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            button3.Enabled = true;
+            button2.Enabled = false;
+            comboBox1.ForeColor = Color.Black;
+        }
+
+        private void Form9_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            serialPort1.Close();
+        }
+
+        private void Form9_Load(object sender, EventArgs e)
+        {
+            String[] portList = System.IO.Ports.SerialPort.GetPortNames();
+            foreach (String portName in portList)
+                comboBox1.Items.Add(portName);
+
+            comboBox2.SelectedIndex = 0;
+            comboBox3.SelectedIndex = 0;
+            comboBox4.SelectedIndex = 3;
+            comboBox5.SelectedIndex = 0;
         }
     }
 }
