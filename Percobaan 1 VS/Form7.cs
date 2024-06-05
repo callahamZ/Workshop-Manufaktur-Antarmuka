@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Percobaan_1_VS
 {
@@ -32,7 +33,7 @@ namespace Percobaan_1_VS
             try
             {
                 serialPort1.NewLine = "\r\n";
-
+                serialPort1.BaudRate = Int32.Parse(comboBox2.Text);
                 serialPort1.Open();
                 comboBox1.ForeColor = Color.Green;
                 MessageBox.Show(serialPort1.PortName + " tersambung!", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -64,6 +65,7 @@ namespace Percobaan_1_VS
                 comboBox1.Items.Add(portName);
 
             radioButton1.Checked = true;
+            comboBox2.SelectedIndex = 0;
         }
 
         private void Form7_FormClosing(object sender, FormClosingEventArgs e)
@@ -100,6 +102,26 @@ namespace Percobaan_1_VS
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
             dataReq = "A";
+        }
+
+        private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            Tampilkan(serialPort1.ReadExisting());
+
+        }
+        private delegate void TampilkanDelegate(string item);
+        private void Tampilkan(string item)
+        {
+            if (InvokeRequired)
+            {
+                // This is a worker thread so delegate the task. 
+                textBox1.Invoke(new TampilkanDelegate(Tampilkan), item);
+            }
+            else
+            {
+                // This is the UI thread so perform the task. 
+                textBox1.Text = item;
+            }
         }
     }
 }

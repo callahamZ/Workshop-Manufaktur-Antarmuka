@@ -59,5 +59,95 @@ namespace Percobaan_1_VS.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Base_Upper {
+            get {
+                object obj = ResourceManager.GetObject("Base Upper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BG_base {
+            get {
+                object obj = ResourceManager.GetObject("BG base", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap blue_semi_truck_side_view_c39tqoauk150bbp2_c39tqoauk150bbp2 {
+            get {
+                object obj = ResourceManager.GetObject("blue-semi-truck-side-view-c39tqoauk150bbp2-c39tqoauk150bbp2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_PENS {
+            get {
+                object obj = ResourceManager.GetObject("Logo_PENS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap signal2_removebg_FLIP {
+            get {
+                object obj = ResourceManager.GetObject("signal2-removebg-FLIP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap signal2_removebg_FLIP_Rotated {
+            get {
+                object obj = ResourceManager.GetObject("signal2-removebg-FLIP_Rotated", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap signal2_removebg_FLIP_Rotated2 {
+            get {
+                object obj = ResourceManager.GetObject("signal2-removebg-FLIP_Rotated2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap signal2_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("signal2-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap truk_biru_hadap_kanan {
+            get {
+                object obj = ResourceManager.GetObject("truk biru hadap kanan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

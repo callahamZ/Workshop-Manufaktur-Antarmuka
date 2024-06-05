@@ -131,10 +131,10 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(43, 193);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(74, 20);
+            this.radioButton1.Size = new System.Drawing.Size(61, 20);
             this.radioButton1.TabIndex = 22;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nothing";
+            this.radioButton1.Text = "<CR>";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 

@@ -41,6 +41,7 @@ namespace Percobaan_1_VS
                
 
                 serialPort1.Open();
+
                 comboBox1.ForeColor = Color.Green;
                 MessageBox.Show(serialPort1.PortName + " tersambung!", "Pemberitahuan", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 button1.Enabled = false;
@@ -94,7 +95,7 @@ namespace Percobaan_1_VS
         {
             if (radioButton1.Checked)
             {
-                serialPort1.NewLine = "\r\n";
+                serialPort1.NewLine = "\r";
             }
         }
     }

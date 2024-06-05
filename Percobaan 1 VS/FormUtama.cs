@@ -64,5 +64,11 @@ namespace Percobaan_1_VS
             Form FormPercPLC = new Form8();
             FormPercPLC.Show();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Form FormTruk = new Form9();
+            FormTruk.Show();
+        }
     }
 }
