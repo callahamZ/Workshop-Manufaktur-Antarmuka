@@ -121,17 +121,20 @@
   <data name="signal2-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\signal2-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="signal2-removebg-FLIP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\signal2-removebg-FLIP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blue-semi-truck-side-view-c39tqoauk150bbp2-c39tqoauk150bbp2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blue-semi-truck-side-view-c39tqoauk150bbp2-c39tqoauk150bbp2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Base Upper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Base Upper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="truk biru hadap kanan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\truk biru hadap kanan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Base Upper" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Base Upper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="trukGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trukGif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="signal2-removebg-FLIP_Rotated2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\signal2-removebg-FLIP_Rotated2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue-semi-truck-side-view-c39tqoauk150bbp2-c39tqoauk150bbp2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue-semi-truck-side-view-c39tqoauk150bbp2-c39tqoauk150bbp2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo_PENS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo_PENS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,7 +145,10 @@
   <data name="signal2-removebg-FLIP_Rotated" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\signal2-removebg-FLIP_Rotated.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="signal2-removebg-FLIP_Rotated2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\signal2-removebg-FLIP_Rotated2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="signal2-removebg-FLIP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\signal2-removebg-FLIP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trukGif2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trukGif2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

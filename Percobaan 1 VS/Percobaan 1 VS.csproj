@@ -235,5 +235,11 @@
   <ItemGroup>
     <None Include="Resources\signal2-removebg-FLIP_Rotated2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trukGif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trukGif2.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

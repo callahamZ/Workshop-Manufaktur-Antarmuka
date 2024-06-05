@@ -71,23 +71,58 @@ namespace Percobaan_1_VS
             panelPintuY--;
             rollingDoor.Top = panelPintuY;
 
-            if (panelPintuY <= -100)
+            rollingDoorIndikator.BackColor = Color.Green;
+
+            limitSwitchCheck();
+
+            if (panelPintuY <= -120)
             {
                 timer2.Stop();
+                rollingDoorIndikator.BackColor= Color.Red;
             }
         }
 
         void checkUltra()
         {
-            if (gambarTruk.Left >= 140)
+            if (gambarTruk.Left > 140 && gambarTruk.Left < 340)
             {
-
+                sensorUltra.BackColor = Color.Green;
+                sensorUltraIndikator.BackColor = Color.Green;
+            }
+            else
+            {
+                sensorUltra.BackColor = Color.Red;
+                sensorUltraIndikator.BackColor = Color.Red;
             }
         }
 
         void checkProx()
         {
+            if (gambarTruk.Left > 180 && gambarTruk.Left < 360)
+            {
+                sensorProx.BackColor = Color.Green;
+                sensorProxIndikator.BackColor = Color.Green;
+            }
+            else
+            {
+                sensorProx.BackColor = Color.Red;
+                sensorProxIndikator.BackColor = Color.Red;
+            }
+        }
 
+        void limitSwitchCheck()
+        {
+            if (rollingDoor.Top < 28)
+            {
+                limitSwitch2.BackColor = Color.Red;
+                limitSwitch2Indikator.BackColor = Color.Red;
+            }
+
+            if (rollingDoor.Top <= -120)
+            {
+                limitSwitch1.BackColor = Color.Green;
+                limitSwitch1Indikator.BackColor = Color.Green;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

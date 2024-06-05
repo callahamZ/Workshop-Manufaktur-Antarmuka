@@ -34,16 +34,14 @@
             this.Tembok = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.Lantai = new System.Windows.Forms.Panel();
+            this.limitSwitch2 = new System.Windows.Forms.Panel();
             this.sensorUltra = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.sensorProx = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.gambarTruk = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.rollingDoor = new System.Windows.Forms.Panel();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.limitSwitch1 = new System.Windows.Forms.Panel();
-            this.limitSwitch2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -62,12 +60,27 @@
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.sensorUltraIndikator = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.sensorProxIndikator = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.limitSwitch1Indikator = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.limitSwitch2Indikator = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.rollingDoorIndikator = new System.Windows.Forms.Panel();
+            this.gambarTruk = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Tembok.SuspendLayout();
             this.Lantai.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gambarTruk)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gambarTruk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -78,9 +91,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(347, 290);
+            this.button1.Location = new System.Drawing.Point(21, 33);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 63);
+            this.button1.Size = new System.Drawing.Size(184, 43);
             this.button1.TabIndex = 1;
             this.button1.Text = "Jalankan Truk";
             this.button1.UseVisualStyleBackColor = true;
@@ -111,6 +124,14 @@
             this.Lantai.Name = "Lantai";
             this.Lantai.Size = new System.Drawing.Size(985, 19);
             this.Lantai.TabIndex = 3;
+            // 
+            // limitSwitch2
+            // 
+            this.limitSwitch2.BackColor = System.Drawing.Color.Green;
+            this.limitSwitch2.Location = new System.Drawing.Point(530, 3);
+            this.limitSwitch2.Name = "limitSwitch2";
+            this.limitSwitch2.Size = new System.Drawing.Size(17, 12);
+            this.limitSwitch2.TabIndex = 5;
             // 
             // sensorUltra
             // 
@@ -146,28 +167,6 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Sensor Proximity";
             // 
-            // gambarTruk
-            // 
-            this.gambarTruk.BackColor = System.Drawing.SystemColors.Control;
-            this.gambarTruk.Image = global::Percobaan_1_VS.Properties.Resources.truk_biru_hadap_kanan;
-            this.gambarTruk.Location = new System.Drawing.Point(12, 103);
-            this.gambarTruk.Name = "gambarTruk";
-            this.gambarTruk.Size = new System.Drawing.Size(279, 122);
-            this.gambarTruk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.gambarTruk.TabIndex = 0;
-            this.gambarTruk.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox2.Image = global::Percobaan_1_VS.Properties.Resources.signal2_removebg_FLIP_Rotated;
-            this.pictureBox2.Location = new System.Drawing.Point(395, 45);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(99, 80);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
             // rollingDoor
             // 
             this.rollingDoor.BackColor = System.Drawing.Color.Gray;
@@ -188,14 +187,6 @@
             this.limitSwitch1.Name = "limitSwitch1";
             this.limitSwitch1.Size = new System.Drawing.Size(17, 12);
             this.limitSwitch1.TabIndex = 4;
-            // 
-            // limitSwitch2
-            // 
-            this.limitSwitch2.BackColor = System.Drawing.Color.Red;
-            this.limitSwitch2.Location = new System.Drawing.Point(530, 3);
-            this.limitSwitch2.Name = "limitSwitch2";
-            this.limitSwitch2.Size = new System.Drawing.Size(17, 12);
-            this.limitSwitch2.TabIndex = 5;
             // 
             // label3
             // 
@@ -388,12 +379,156 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(151, 20);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rollingDoorIndikator);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.limitSwitch2Indikator);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.limitSwitch1Indikator);
+            this.groupBox2.Controls.Add(this.sensorProxIndikator);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.sensorUltraIndikator);
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Location = new System.Drawing.Point(351, 283);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(619, 254);
+            this.groupBox2.TabIndex = 14;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Kontrol";
+            // 
+            // sensorUltraIndikator
+            // 
+            this.sensorUltraIndikator.BackColor = System.Drawing.Color.Red;
+            this.sensorUltraIndikator.Location = new System.Drawing.Point(21, 115);
+            this.sensorUltraIndikator.Name = "sensorUltraIndikator";
+            this.sensorUltraIndikator.Size = new System.Drawing.Size(15, 12);
+            this.sensorUltraIndikator.TabIndex = 6;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(18, 90);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(73, 18);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Indikator";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(44, 113);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(113, 16);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Sensor Ultrasonik";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(44, 135);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(107, 16);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "Sensor Proximity";
+            // 
+            // sensorProxIndikator
+            // 
+            this.sensorProxIndikator.BackColor = System.Drawing.Color.Red;
+            this.sensorProxIndikator.Location = new System.Drawing.Point(21, 137);
+            this.sensorProxIndikator.Name = "sensorProxIndikator";
+            this.sensorProxIndikator.Size = new System.Drawing.Size(15, 12);
+            this.sensorProxIndikator.TabIndex = 17;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(44, 156);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(85, 16);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "Limit Switch 1";
+            // 
+            // limitSwitch1Indikator
+            // 
+            this.limitSwitch1Indikator.BackColor = System.Drawing.Color.Red;
+            this.limitSwitch1Indikator.Location = new System.Drawing.Point(21, 158);
+            this.limitSwitch1Indikator.Name = "limitSwitch1Indikator";
+            this.limitSwitch1Indikator.Size = new System.Drawing.Size(15, 12);
+            this.limitSwitch1Indikator.TabIndex = 17;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(44, 177);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(85, 16);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "Limit Switch 2";
+            // 
+            // limitSwitch2Indikator
+            // 
+            this.limitSwitch2Indikator.BackColor = System.Drawing.Color.Green;
+            this.limitSwitch2Indikator.Location = new System.Drawing.Point(21, 179);
+            this.limitSwitch2Indikator.Name = "limitSwitch2Indikator";
+            this.limitSwitch2Indikator.Size = new System.Drawing.Size(15, 12);
+            this.limitSwitch2Indikator.TabIndex = 17;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(51, 200);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(103, 18);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "Rolling Door";
+            // 
+            // rollingDoorIndikator
+            // 
+            this.rollingDoorIndikator.BackColor = System.Drawing.Color.Red;
+            this.rollingDoorIndikator.Location = new System.Drawing.Point(21, 197);
+            this.rollingDoorIndikator.Name = "rollingDoorIndikator";
+            this.rollingDoorIndikator.Size = new System.Drawing.Size(27, 24);
+            this.rollingDoorIndikator.TabIndex = 7;
+            // 
+            // gambarTruk
+            // 
+            this.gambarTruk.BackColor = System.Drawing.SystemColors.Control;
+            this.gambarTruk.Image = global::Percobaan_1_VS.Properties.Resources.trukGif2;
+            this.gambarTruk.Location = new System.Drawing.Point(12, 112);
+            this.gambarTruk.Name = "gambarTruk";
+            this.gambarTruk.Size = new System.Drawing.Size(279, 122);
+            this.gambarTruk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gambarTruk.TabIndex = 0;
+            this.gambarTruk.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox2.Image = global::Percobaan_1_VS.Properties.Resources.signal2_removebg_FLIP_Rotated;
+            this.pictureBox2.Location = new System.Drawing.Point(395, 45);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(99, 80);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form9
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(982, 571);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.limitSwitch1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox1);
@@ -406,7 +541,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.sensorUltra);
             this.Controls.Add(this.Tembok);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.gambarTruk);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -416,12 +550,14 @@
             this.Load += new System.EventHandler(this.Form9_Load);
             this.Tembok.ResumeLayout(false);
             this.Lantai.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gambarTruk)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gambarTruk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -462,5 +598,17 @@
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel limitSwitch2Indikator;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel limitSwitch1Indikator;
+        private System.Windows.Forms.Panel sensorProxIndikator;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel sensorUltraIndikator;
+        private System.Windows.Forms.Panel rollingDoorIndikator;
+        private System.Windows.Forms.Label label15;
     }
 }
