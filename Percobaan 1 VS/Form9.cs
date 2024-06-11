@@ -27,6 +27,7 @@ namespace Percobaan_1_VS
         private int truckStopPoint = 160;
         private bool truckContinue = false;
         private bool modeNaik = true;
+        private int jumlahTruk = 0;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -43,15 +44,21 @@ namespace Percobaan_1_VS
             imageX++;
             gambarTruk.Left = imageX;
 
+            button4.Enabled = false;
+
             checkUltra();
             checkProx();
 
             // Pintu turun kembali
             if (gambarTruk.Left == 360)
             {
+                // Menghitung truk yang lewat (Counter)
+                hitungTruk();
+
                 modeNaik = false;
                 timer2.Start();
             }
+
 
             if (imageX >= truckStopPoint)
             {
@@ -60,6 +67,7 @@ namespace Percobaan_1_VS
                 {
                     truckStopPoint = 160;
                     truckContinue = false;
+                    button4.Enabled = true;
                     return;
                 }
                 bukaPintu();
@@ -135,17 +143,29 @@ namespace Percobaan_1_VS
 
         void limitSwitchCheck()
         {
-            if (rollingDoor.Top < 28)
+            if (rollingDoor.Top >= 24)
             {
-                limitSwitch2.BackColor = Color.Red;
-                limitSwitch2Indikator.BackColor = Color.Red;
+                limitSwitch2.BackColor = Color.Green;
+                limitSwitch2Indikator.BackColor = Color.Green;
             }
-
-            if (rollingDoor.Top <= -120)
+            else if (rollingDoor.Top <= -120)
             {
                 limitSwitch1.BackColor = Color.Green;
                 limitSwitch1Indikator.BackColor = Color.Green;
             }
+            else
+            {
+                limitSwitch1.BackColor = Color.Red;
+                limitSwitch1Indikator.BackColor= Color.Red;
+                limitSwitch2.BackColor= Color.Red;
+                limitSwitch2Indikator.BackColor= Color.Red;
+            }
+        }
+
+        void hitungTruk()
+        {
+            jumlahTruk++;
+            labelHitung.Text = jumlahTruk.ToString();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -240,6 +260,11 @@ namespace Percobaan_1_VS
             comboBox3.SelectedIndex = 0;
             comboBox4.SelectedIndex = 3;
             comboBox5.SelectedIndex = 0;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            gambarTruk.Left = 12;
         }
     }
 }
